@@ -5,8 +5,8 @@ import pandas as pd
 # URL para coleta de dados
 bright_stars_url = 'https://en.wikipedia.org/wiki/List_of_brightest_stars_and_other_record_stars'
 
-# Obtenha a Página
-page = requests.get(bright_stars_url)
+# Obtenha a Página com o código 'requests.get'
+page = ???(bright_stars_url)
 print(page)
 
 # Analise a Página
@@ -21,12 +21,7 @@ for tr in table_rows:
     row = [i.text.rstrip() for i in td]
     temp_list.append(row)
 
-
-Star_names = []
-Distance =[]
-Mass = []
-Radius =[]
-Lum = []
+#Crie listas vazias com os nomes de: Star_names,Distance,Mass,Radius,Lum
 
 for i in range(1,len(temp_list)):
     Star_names.append(temp_list[i][1])
